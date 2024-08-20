@@ -24,3 +24,7 @@ Dentro de esta carpeta incluimos dos sencillos programas para controlar los movi
 + mano.ino: es el programa donde se configuran los movimientos y pines de cada servomotor.
 
 + mano.py: el programa de python para introducir las teclas desde la terminal.
+
++ sensor: un programa para visualizar las señales emg recibidas en el arduino con el serial plotter.
+
++ obt_signal: este programa captura las señales recibidas por el sensor emg y las guarda en un archivo de texto.
