@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import mplcursors
 
+#prueba
 # Variable global para almacenar los datos de múltiples archivos
 datos_archivos = {}
 
