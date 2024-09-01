@@ -1,0 +1,7 @@
+4_dedos 28.5
+
+carpeta cut datos_nuevos/4_dedos_cut
+- 2,4,5
+
+cerrar 53.9
+- 15,30,34,39
