@@ -40,7 +40,7 @@ load_and_filter_data <- function(filepath, window_size = 10, margin = 30) {
 }
 
 # Directorio que contiene los archivos de datos
-directory <- "C:/Users/emili/OneDrive/Escritorio/Git/Mano_prostetica_Labrobcog_CInC/Datos por modificar/datos_final/corazon_cortados"
+directory <- "C:/Users/Lab/Desktop/Git/Mano_prostetica_Labrobcog_CInC/Datos por modificar/datos_final/deditos_cortados"
 
 # Obtener una lista de todos los archivos de datos en el directorio
 filepaths <- list.files(directory, full.names = TRUE)
