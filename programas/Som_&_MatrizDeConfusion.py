@@ -6,17 +6,19 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load the extracted features
-df = pd.read_csv('G:/Proyecto mano/datos_final/emg_features.csv')
-test = pd.read_csv('G:/Proyecto mano/datos_final/test.csv')
+df = pd.read_csv('C:/Users/lab/Desktop/Git/Mano_prostetica_Labrobcog_CInC/programas/emg_features.csv')
+test = pd.read_csv('C:/Users/lab/Desktop/Git/Mano_prostetica_Labrobcog_CInC/programas/test.csv')
 
 # Prepare the data for SOM
-X = df[['peak_height', 'peak_width']].values
+X = df[['peak_height']].values
+#X = df[['peak_height', 'peak_width']].values
 y_train = df['label'].values  # Assumed 'label' is the column for true labels in training data
 scaler = MinMaxScaler()
 X_scaled = scaler.fit_transform(X)
 
 # Prepare the data for test
-Y = test[['peak_height', 'peak_width']].values
+Y = test[['peak_height']].values
+#Y = test[['peak_height', 'peak_width']].values
 y_test = test['label'].values  # Assumed 'label' is the column for true labels in test data
 Y_scaled = scaler.transform(Y)  # Use the same scaler fitted on X
 
@@ -26,7 +28,7 @@ y_train_encoded = label_encoder.fit_transform(y_train)
 y_test_encoded = label_encoder.transform(y_test)
 
 # Initialize and train the SOM
-som = MiniSom(x=5, y=5, input_len=2, sigma=0.3, learning_rate=0.5)
+som = MiniSom(x=5, y=5, input_len=1, sigma=0.3, learning_rate=0.5)
 som.random_weights_init(X)
 som.train_random(data=X, num_iteration=1000)
 
@@ -42,7 +44,7 @@ weights_c_format = weights.tolist()
 
 # Guarda los pesos en un archivo de texto
 with open('som_weights.h', 'w') as f:
-    f.write('float som_weights[5][5][2] = ' + str(weights_c_format).replace('[', '{').replace(']', '}') + ';')
+    f.write('float som_weights[5][5][1] = ' + str(weights_c_format).replace('[', '{').replace(']', '}') + ';')
 
 plt.figure(figsize=(10, 10))
 for i, x in enumerate(X):
