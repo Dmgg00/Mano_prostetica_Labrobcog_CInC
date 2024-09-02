@@ -2,8 +2,8 @@ import os
 import numpy as np
 
 # Definir la carpeta de entrada y la carpeta de salida
-input_folder = ('C:/Users/emili/OneDrive/Escritorio/Git/Mano_prostetica_Labrobcog_CInC/Datos por modificar/nuevos_datos/cerrar_nuevos')
-output_folder = ('C:/Users/emili/OneDrive/Escritorio/Git/Mano_prostetica_Labrobcog_CInC/Datos por modificar/nuevos_datos/cerrar_nuevos_cut')
+input_folder = ('C:/Users/emili/OneDrive/Escritorio/Git/Mano_prostetica_Labrobcog_CInC/Datos por modificar/nuevos_datos/corazon')
+output_folder = ('C:/Users/emili/OneDrive/Escritorio/Git/Mano_prostetica_Labrobcog_CInC/Datos por modificar/nuevos_datos/corazon_cut')
 
 # Crear la carpeta de salida si no existe
 os.makedirs(output_folder, exist_ok=True)
