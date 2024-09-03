@@ -121,10 +121,10 @@ void processPeak() {
   float detected_peak_height = maxbuffervalue - threshold;
   float detected_peak_width = calculatePeakWidth();
 
-  float input[2] = {detected_peak_height, detected_peak_width};
+  float input[1] = {detected_peak_height};
   findWinnerNeuron(input);
 
-  printPeakData(detected_peak_height, detected_peak_width);
+  printPeakData(detected_peak_height);
   resetBuffer();
 
   moveServosBasedOnWinnerNeuron();
